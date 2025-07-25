@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-07-25T16:55:46.767243" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="c:\Users\Aditya\SeleniumFramework\tests\test.robot">
+<test id="s1-t1" name="Open Google" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-25T16:55:47.124089" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-25T16:55:47.123726" elapsed="3.050083"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-07-25T16:55:50.178356" level="INFO">Page title is 'Google'.</msg>
+<arg>Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-07-25T16:55:50.174401" elapsed="0.004225"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-25T16:55:50.179096" elapsed="2.128701"/>
+</kw>
+<status status="PASS" start="2025-07-25T16:55:47.122737" elapsed="5.185705"/>
+</test>
+<test id="s1-t2" name="Test" line="15">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2025-07-25T16:55:52.310654" level="INFO">${jsonfile} = {'user': {'id': 101, 'name': 'Aditya Patil', 'roles': ['admin', 'editor'], 'profile': {'email': 'aditya.patil@example.com', 'phone': '+91-9876543210', 'address': {'street': '123 MG Road', 'city': 'Pun...</msg>
+<var>${jsonfile}</var>
+<arg>tests/test1.json</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2025-07-25T16:55:52.309991" elapsed="0.000801"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-07-25T16:55:52.335359" level="INFO">${user1} = [{'id': 101, 'name': 'Aditya Patil', 'roles': ['admin', 'editor'], 'profile': {'email': 'aditya.patil@example.com', 'phone': '+91-9876543210', 'address': {'street': '123 MG Road', 'city': 'Pune', 'sta...</msg>
+<var>${user1}</var>
+<arg>${jsonfile}</arg>
+<arg>$.user</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-07-25T16:55:52.311303" elapsed="0.024276"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${jsonfile}[user]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-25T16:55:52.336044" elapsed="0.000429"/>
+</kw>
+<status status="PASS" start="2025-07-25T16:55:52.309522" elapsed="0.027323"/>
+</test>
+<test id="s1-t3" name="Test1" line="21">
+<kw name="Skip" owner="BuiltIn">
+<msg time="2025-07-25T16:55:52.338120" level="SKIP">"Skipping this test"</msg>
+<arg>msg="Skipping this test"</arg>
+<doc>Skips the rest of the current test.</doc>
+<status status="SKIP" start="2025-07-25T16:55:52.337864" elapsed="0.000494">"Skipping this test"</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>This test is skipped</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-07-25T16:55:52.338724" elapsed="0.000085"/>
+</kw>
+<status status="SKIP" start="2025-07-25T16:55:52.337538" elapsed="0.001590">"Skipping this test"</status>
+</test>
+<status status="PASS" start="2025-07-25T16:55:46.771164" elapsed="5.568736"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="2" fail="0" skip="1">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

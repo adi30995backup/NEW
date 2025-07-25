@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.3 on win32)" generated="2025-07-25T16:56:17.624500" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\Users\Aditya\SeleniumFramework\tests\test.robot">
+<test id="s1-t1" name="Open Google" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-25T16:56:17.884034" level="INFO">Opening browser 'Chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-25T16:56:17.883825" elapsed="1.910331"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-07-25T16:56:19.799862" level="INFO">Page title is 'Google'.</msg>
+<arg>Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-07-25T16:56:19.794547" elapsed="0.005439"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-25T16:56:19.800289" elapsed="2.110977"/>
+</kw>
+<status status="PASS" start="2025-07-25T16:56:17.882910" elapsed="4.028875"/>
+</test>
+<test id="s1-t2" name="Test" line="15">
+<kw name="Load Json From File" owner="JSONLibrary">
+<msg time="2025-07-25T16:56:21.913525" level="INFO">${jsonfile} = {'user': {'id': 101, 'name': 'Aditya Patil', 'roles': ['admin', 'editor'], 'profile': {'email': 'aditya.patil@example.com', 'phone': '+91-9876543210', 'address': {'street': '123 MG Road', 'city': 'Pun...</msg>
+<var>${jsonfile}</var>
+<arg>tests/test1.json</arg>
+<doc>Load JSON from file.</doc>
+<status status="PASS" start="2025-07-25T16:56:21.913004" elapsed="0.000559"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<msg time="2025-07-25T16:56:21.928178" level="INFO">${user1} = [{'id': 101, 'name': 'Aditya Patil', 'roles': ['admin', 'editor'], 'profile': {'email': 'aditya.patil@example.com', 'phone': '+91-9876543210', 'address': {'street': '123 MG Road', 'city': 'Pune', 'sta...</msg>
+<var>${user1}</var>
+<arg>${jsonfile}</arg>
+<arg>$.user</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="PASS" start="2025-07-25T16:56:21.913716" elapsed="0.014509"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${jsonfile}[user]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-25T16:56:21.928519" elapsed="0.000387"/>
+</kw>
+<status status="PASS" start="2025-07-25T16:56:21.912577" elapsed="0.016514"/>
+</test>
+<test id="s1-t3" name="Test1" line="21">
+<kw name="Skip" owner="BuiltIn">
+<msg time="2025-07-25T16:56:21.929915" level="SKIP">"Skipping this test"</msg>
+<arg>msg="Skipping this test"</arg>
+<doc>Skips the rest of the current test.</doc>
+<status status="SKIP" start="2025-07-25T16:56:21.929715" elapsed="0.000343">"Skipping this test"</status>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>This test is skipped</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-07-25T16:56:21.930221" elapsed="0.000027"/>
+</kw>
+<status status="SKIP" start="2025-07-25T16:56:21.929459" elapsed="0.000955">"Skipping this test"</status>
+</test>
+<status status="PASS" start="2025-07-25T16:56:17.625729" elapsed="4.305126"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="2" fail="0" skip="1">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-07-25T16:56:17.881918" level="ERROR">Error in file 'C:\Users\Aditya\SeleniumFramework\tests\test.robot' on line 6: Processing variable file 'C:\Users\Aditya\SeleniumFramework\tests\test2.yml' failed: Using YAML variable files requires PyYAML module to be installed.Typically you can install it by running `pip install pyyaml`.</msg>
+</errors>
+</robot>

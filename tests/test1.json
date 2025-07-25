@@ -1,0 +1,39 @@
+{
+  "user": {
+    "id": 101,
+    "name": "Aditya Patil",
+    "roles": ["admin", "editor"],
+    "profile": {
+      "email": "aditya.patil@example.com",
+      "phone": "+91-9876543210",
+      "address": {
+        "street": "123 MG Road",
+        "city": "Pune",
+        "state": "Maharashtra",
+        "zip": "411001"
+      }
+    }
+  },
+  "projects": [
+    {
+      "project_id": "P001",
+      "name": "Automation Framework",
+      "technologies": ["Python", "Robot Framework", "Selenium"],
+      "status": "active"
+    },
+    {
+      "project_id": "P002",
+      "name": "API Testing Suite",
+      "technologies": ["Postman", "REST Assured"],
+      "status": "completed"
+    }
+  ],
+  "settings": {
+    "notifications": {
+      "email": true,
+      "sms": false
+    },
+    "theme": "dark",
+    "language": "en-IN"
+  }
+}
