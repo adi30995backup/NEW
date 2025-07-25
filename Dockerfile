@@ -30,7 +30,7 @@ RUN pip install \
     selenium 
 
 #copy the test files
-Copy . /app
+COPY . /app
 
 #run the tests
 ENTRYPOINT ["robot", "-d", "reports", "tests/test.robot"]
