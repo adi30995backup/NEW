@@ -2,7 +2,7 @@
 FROM python:3.11-slim
 
 RUN apt-get update && \
-    apt-get install -y wget curl unzip gnupg ca-certificates apt-transport-https && \
+   # apt-get install -y wget curl unzip gnupg ca-certificates apt-transport-https && \
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
     apt-get install -y ./google-chrome-stable_current_amd64.deb && \
     rm google-chrome-stable_current_amd64.deb
